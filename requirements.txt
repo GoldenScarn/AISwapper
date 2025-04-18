@@ -1,11 +1,11 @@
 --extra-index-url https://download.pytorch.org/whl/cu124
 numpy==1.26.4
-gradio==5.9.1
-opencv-python-headless==4.10.0.84
-onnx==1.16.1
+gradio==5.25.2
+opencv-python-headless==4.11.0.86
+onnx==1.17.0
 insightface==0.7.3
-albucore==0.0.16
-psutil==5.9.6
+albucore==0.0.24
+psutil==7.0.0
 torch==2.5.1+cu124; sys_platform != 'darwin'
 torch==2.5.1; sys_platform == 'darwin'
 torchvision==0.20.1+cu124; sys_platform != 'darwin'
