@@ -48,8 +48,8 @@ def faceswap_tab():
         with gr.Row(variant='panel'):
             with gr.Column(scale=2):
                 with gr.Row():
-                    input_faces = gr.Gallery(label="Input faces gallery", allow_preview=False, preview=False, height=138, columns=64, object_fit="scale-down", interactive=False)
-                    target_faces = gr.Gallery(label="Target faces gallery", allow_preview=False, preview=False, height=138, columns=64, object_fit="scale-down", interactive=False)
+                    input_faces = gr.Gallery(label="Input faces gallery", allow_preview=False, preview=False, height=576, columns=3, object_fit="scale-down", interactive=False)
+                    target_faces = gr.Gallery(label="Target faces gallery", allow_preview=False, preview=False, height=576, columns=3, object_fit="scale-down", interactive=False)
                 with gr.Row():
                     bt_move_left_input = gr.Button("⬅ Move left", size='sm')
                     bt_move_right_input = gr.Button("➡ Move right", size='sm')
@@ -176,7 +176,7 @@ def faceswap_tab():
             with gr.Column(scale=1):
                 num_swap_steps = gr.Slider(1, 5, value=1, step=1.0, label="Number of swapping steps", info="More steps may increase likeness")
             with gr.Column(scale=2):
-                ui.globals.ui_selected_enhancer = gr.Dropdown(["None", "Codeformer", "DMDNet", "GFPGAN", "GPEN", "Restoreformer++"], value="None", label="Select post-processing")
+                ui.globals.ui_selected_enhancer = gr.Dropdown(["None", "GFPGAN", "Restoreformer++"], value="None", label="Select post-processing")
 
         with gr.Row(variant='panel'):
             with gr.Column(scale=1):
