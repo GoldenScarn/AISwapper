@@ -48,13 +48,7 @@ def faceswap_tab():
         with gr.Row(variant='panel'):
             with gr.Column(scale=2):
                 with gr.Row():
-                    input_faces = gr.Gallery(
-                    label="Input faces gallery",
-                    allow_preview=False,
-                    columns=3,
-                    object_fit="scale-down",
-                    interactive=False,
-                    )
+                    input_faces = gr.Gallery(label="Input faces gallery", allow_preview=False, columns=3, object_fit="scale-down", interactive=False)
                     target_faces = gr.Gallery(label="Target faces gallery", allow_preview=False, preview=False, height=576, columns=3, object_fit="scale-down", interactive=False)
                 with gr.Row():
                     bt_move_left_input = gr.Button("⬅ Move left", size='sm')
@@ -839,3 +833,4 @@ def display_output(filename):
         else:
             current_frame = get_image_frame(filename)
         return gr.Image(visible=True, value=util.convert_to_gradio(current_frame)), gr.Video(visible=False)
+
